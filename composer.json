@@ -1,5 +1,5 @@
 {
-  "require": {
-    "php": "^5.6.0"
-  }
+    "name": "user1/tmp-php",
+    "description": "repo de ejercicios php",
+    "require": {}
 }
