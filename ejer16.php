@@ -9,7 +9,6 @@
 	while (! feof($archivo)) {
 		$linea = fgets($archivo);
 		$campos = explode(",", $linea);
-		$cant_alumnos += 1;
 		// si es varon
 		if ($campos[1] == 1)
 		{
@@ -17,7 +16,8 @@
 			if ($campos[2] == 2) {
 				$cant_varones_casados += 1;
 				// varones solteros y edad igual a 25
-			} else if ($campos[2] == 1 && $campos[0] == 25) {
+			} 
+			if ($campos[2] == 1 && $campos[0] == 25) {
 				$cant_varones_solt_25 += 1;
 			}
 			$cant_varones += 1;
@@ -40,7 +40,10 @@
 		}
 	}
 	fclose($archivo);
-	echo "Cantidad de alumnos: " . $cant_alumnos . "<br>";
 	echo "Cantidad de varones: " . $cant_varones . "<br>";
-	echo "Cantidad de mujeres solteras: " . $cant_muj_solteras . "<br>";
+	echo "Cantidad de mujeres entre 20 y 30 años: " . $cant_muj_20_30 . "<br>";
+	echo "Cantidad de mujeres casadas entre 30 y 40 años: " . $cant_muj_casadas_30_40 . "<br>";
+	echo "Cantidad de mujeres casadas: " . $cant_muj_casadas . "<br>";
+	echo "Cantidad de varones solteros: " . $cant_varones_solt_25 . "<br>";
+	echo "Cantidad de varones casados:" . $cant_varones_casados . "<br>";
 ?>
