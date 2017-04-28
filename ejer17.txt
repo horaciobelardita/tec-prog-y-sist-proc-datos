@@ -1,6 +1,0 @@
-1,Manzanas,17,10
-2,Mandarinas,23,10
-3,Melon,55,10
-4,Limones,67,10
-5,Manzanas,87,10
-6,Manzanas,97,10
