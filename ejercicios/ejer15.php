@@ -3,8 +3,9 @@
 	$cant_alumnos = 0;
 	$cant_varones = 0;
 	$cant_muj_solteras = 0;
+	$linea = fgets($archivo);
+
 	while (! feof($archivo)) {
-		$linea = fgets($archivo);
 		$campos = explode(",", $linea);
 		$cant_alumnos += 1;
 		if ($campos[1] == 1)
@@ -16,6 +17,7 @@
 				$cant_muj_solteras += 1;
 			}
 		}
+		$linea = fgets($archivo);
 	}
 	fclose($archivo);
 	echo "Cantidad de alumnos: " . $cant_alumnos . "<br>";
