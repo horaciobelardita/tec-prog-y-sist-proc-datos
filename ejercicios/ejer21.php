@@ -13,7 +13,7 @@
 <p>Informe de Articulos</p>
 <table>
     <?php
-    $archivo = fopen("ejer17.txt", "r");
+    $archivo = fopen("ejer21.txt", "r");
     $articulos = array();
     while (! feof($archivo)) {
         $linea = fgets($archivo);
