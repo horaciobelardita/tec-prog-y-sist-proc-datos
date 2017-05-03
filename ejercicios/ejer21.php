@@ -49,8 +49,8 @@
         }
         echo "</tbody></table>";
     }
-    echo "Total de entrada: " . $total_entrada;
-    echo "Total salida: " . $total_salida;
+    echo "Total de entrada: " . $total_entrada . "<br>";
+    echo "Total salida: " . $total_salida . "<br>";
     ?>
 
 </body>
