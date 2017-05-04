@@ -4,18 +4,16 @@ $dbopts = parse_url(getenv('DATABASE_URL'));
 
 $conn = new PDO('pgsql:host=' . $dbopts['host'] .';port=' . $dbopts['port'] .  ';dbname=' . ltrim($dbopts["path"],'/'), $dbopts['user'], $dbopts['pass']);
 
-// write sql query
-$sql = "SELECT * FROM ejer15";
 
-// execute query and store the results
-$cmd = $conn->prepare($sql);
-$cmd->execute();
-$alumnos = $cmd->fetchAll();
-// loop through the data
-foreach ($alumnos as $alumno) {
-    echo $alumno['nya'] . "<br>";
+function get_cant_alumnos($conn) {
+    $sql = "SELECT count(*) FROM ejer15";
+    $cmd = $conn->prepare($sql);
+    $cmd->execute();
+    return $cmd->fetch();
 }
-// display titles using echo
 
-// disconnect
+echo "Cantidad de alumnos: " . get_cant_alumnos($conn) . "<br>";
+
+
+// desconectar
 $conn = null;
