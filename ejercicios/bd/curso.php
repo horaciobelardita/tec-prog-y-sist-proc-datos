@@ -41,7 +41,7 @@
         </thead>
         <tbody>
         <?php 
-            foreach ($alumnos as $alumnos) {
+            foreach ($alumnos as $alumno) {
                 echo "<tr>";
                 echo "<td>" . $alumno['nombre'] . "</td>";
                 echo "<td>" . $alumno['email'] . "</td>";
