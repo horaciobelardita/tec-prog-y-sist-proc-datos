@@ -24,5 +24,34 @@
         </select>
         <input type="submit" value="Submit"/>
     </form>
+    <?php include('obtener_alumnos.php'); ?>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Cursando
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+            foreach ($alumnos as $alumnos) {
+                echo "<tr>";
+                echo "<td>" . $alumno['nombre'] . "</td>";
+                echo "<td>" . $alumno['email'] . "</td>";
+                echo "<td>" . $cursos[$alumno['codigo_curso']]['nombre_curso'] . "</td>";
+                echo "</tr>";
+                
+            }
+        
+        ?>
+        </tbody>
+    </table>
 </body>
 </html>
