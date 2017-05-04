@@ -9,7 +9,7 @@ function get_cant_alumnos($conn) {
     $sql = "SELECT count(*) FROM ejer15";
     $cmd = $conn->prepare($sql);
     $cmd->execute();
-    var_dump($cmd->fetch());
+    return $cmd->fetch()['count'];
 }
 
 echo "Cantidad de alumnos: " . get_cant_alumnos($conn) . "<br>";
