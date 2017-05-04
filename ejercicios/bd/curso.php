@@ -16,7 +16,12 @@
         <input type="text" name="name"/>
         <input type="text" name="email"/>
         <select name="codigo_curso">
-            
+            <?php 
+                var_dump($cursos);
+                foreach($cursos as $curso) {
+                    echo "<option value=" . $curso['id'] .">" . $curso['nombre_curso'] . "</select>";
+                }
+            ?>
         </select>
         <input type="submit" value="Submit"/>
     </form>
