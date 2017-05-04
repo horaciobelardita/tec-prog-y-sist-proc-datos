@@ -5,9 +5,9 @@ $conn = new PDO('pgsql:host=' . $dbopts['host'] .';port=' . $dbopts['port'] .  '
 
 $nombre_curso = $_POST['nombre_curso'];
 
- $sql = "insert into cursos (nombre_curso) values " . $nombre_curso;
+ $sql = "insert into cursos (nombre_curso) values (?)";
  $cmd = $conn->prepare($sql);
- $cmd->execute();
+ $cmd->execute(array($nombre_curso));
 
 
 $conn = null;
