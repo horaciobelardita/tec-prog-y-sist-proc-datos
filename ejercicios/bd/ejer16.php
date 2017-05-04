@@ -26,7 +26,7 @@ function get_count($sql, $conn) {
 }
 
 echo "Cantidad de mujeres entre 20 y 30 años: " . get_count($get_cant_mujeres_20_30, $conn) . "<br>";
-echo "Cantidad de mujeres casadas entre 30 y 40 años" . get_count($get_cant_mujeres_casadas_30_40, $conn) . "<br>";
+echo "Cantidad de mujeres casadas entre 30 y 40 años: " . get_count($get_cant_mujeres_casadas_30_40, $conn) . "<br>";
 echo "Cantidad de mujeres casadas: " . get_count($get_mujeres_casadas, $conn). "<br>";
 echo "Total de varones: " . get_count($get_cant_varones, $conn). "<br>";
 echo "Total de varones solteros con edad de 25 años: " . get_count($get_varones_solteros_25, $conn). "<br>";
