@@ -7,7 +7,7 @@
 <body>
     <h2>Alta de curso</h2>
     <form action="alta_curso.php" method="POST">
-        <input type="text" name="nombre_curso" />
+        <input type="text" name="nombre_curso" id="nombre_curso" />
         <input type="submit" value="Alta Curso" name="alta_curso"/>
     </form>
     <h2>Alta de alumno</h2>
@@ -53,5 +53,13 @@
         ?>
         </tbody>
     </table>
+    <script>
+        var nombre_curso = document.getElementById("#nombre_curso").value;
+        if (nombre_curso.trim()) 
+        {
+            alert("No");
+
+        }                
+    </script>
 </body>
 </html>
