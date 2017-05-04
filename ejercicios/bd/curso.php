@@ -17,9 +17,8 @@
         <input type="text" name="email"/>
         <select name="codigo_curso">
             <?php 
-                var_dump($cursos);
                 foreach($cursos as $curso) {
-                    echo "<option value=" . $curso['id'] .">" . $curso['nombre_curso'] . "</select>";
+                    echo "<option value=" . $curso['id'] .">" . $curso['nombre_curso'] . "</option>";
                 }
             ?>
         </select>
