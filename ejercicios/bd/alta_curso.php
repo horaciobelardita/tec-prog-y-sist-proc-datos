@@ -14,7 +14,7 @@ if ($_POST['alta_curso']) {
   
     $sql = "insert into alumnos (nombre, email, codigo_curso) values (?, ?, ?)";
  $cmd = $conn->prepare($sql);
- $cmd->execute(array($_POST['nombre'], $_POST['email'], $_POST['codigo_curso']));
+ $cmd->execute(array($_POST['name'], $_POST['email'], $_POST['codigo_curso']));
 }
 
 
