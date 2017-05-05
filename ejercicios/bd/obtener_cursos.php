@@ -11,6 +11,5 @@ $cmd->execute();
 
 $cursos = $cmd->fetchAll();
 
-$conn = null;
 
 ?>
