@@ -8,7 +8,7 @@
     <h2>Alta de curso</h2>
     <form action="alta_curso.php" method="POST">
         <input type="text" name="nombre_curso" id="nombre_curso" />
-        <input type="submit" value="Alta Curso" name="alta_curso"/>
+        <input type="submit" value="Alta Curso" name="alta_curso" onClick="validar();"/>
     </form>
     <h2>Alta de alumno</h2>
     <?php include('obtener_cursos.php'); ?>
@@ -54,12 +54,18 @@
         </tbody>
     </table>
     <script>
-        var nombre_curso = document.getElementById("#nombre_curso").value;
-        if (nombre_curso.trim()) 
-        {
-            alert("No");
-
-        }                
+        function validar(event) {
+            event.preventDefault();
+            var nombre_curso = document.getElementById("#nombre_curso").value;
+            if (! nombre_curso.trim()) 
+            {
+                alert("No");
+    
+            }        
+            
+            
+        }
+          
     </script>
 </body>
 </html>
