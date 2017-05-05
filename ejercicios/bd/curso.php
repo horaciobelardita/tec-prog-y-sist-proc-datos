@@ -56,7 +56,7 @@
     <script>
         function validar(event) {
             event.preventDefault();
-            var nombre_curso = document.getElementById("#nombre_curso").value;
+            var nombre_curso = document.getElementById("nombre_curso").value;
             if (! nombre_curso.trim()) 
             {
                 alert("No");
