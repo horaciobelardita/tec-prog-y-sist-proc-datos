@@ -12,7 +12,7 @@ if (isset($_POST['alta_curso'])) {
     }
 
 
-} else if (isse($_POST['alta_alumno'])) {
+} else if (isset($_POST['alta_alumno'])) {
   if (trim($_POST['name']) && trim($_POST['email'])) {
     $sql = "insert into alumnos (nombre, email, codigo_curso) values (?, ?, ?)";
     $cmd = $conn->prepare($sql);
