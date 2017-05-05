@@ -8,10 +8,13 @@
     <h2>Alta de curso</h2>
     <form action="alta.php" method="POST">
         <input type="text" name="nombre_curso" id="nombre_curso" />
-        <input type="submit" value="Alta Curso" name="alta_curso" onClick="validar(event);"/>
+        <input type="submit" value="Alta Curso" name="alta_curso" />
     </form>
     <h2>Alta de alumno</h2>
-    <?php include('obtener_cursos.php'); ?>
+    <?php
+        include('functions.php');
+        $cursos = get_all('cursos');
+    ?>
     <form action="alta.php" method="POST">
         <input type="text" name="name"/>
         <input type="text" name="email"/>
@@ -24,7 +27,6 @@
         </select>
         <input type="submit" value="Alta alumno" name="alta_alumno"/>
     </form>
-    <?php include('obtener_alumnos.php'); ?>
     <table>
         <thead>
             <tr>
@@ -40,7 +42,8 @@
             </tr>
         </thead>
         <tbody>
-        <?php 
+        <?php
+            $alumnos = get_all('alumnos');
             foreach ($alumnos as $alumno) {
                 echo "<tr>";
                 echo "<td>" . $alumno['nombre'] . "</td>";
