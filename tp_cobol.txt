@@ -1,0 +1,13 @@
+ejercicio 1 - mod-abm
+mcu pic 9
+alterar longitud del archivo a 49
+
+ejercicio 2 - MLISP1-I
+  LINAGE 24 FOOTING 20 -> imprime en linea 20
+02 FILLER PIC X(19) VALUE  "PADRON DE ALUMNOS".
+02 FILLER PIC X(12) VALUE  "NRO. ALUMNO".
+cambiar  02 FILLER PIC X(13) VALUE  "FECHA INGRESO". por "CURSO"
+quitar 02 FILLER PIC X(04) VALUE  "EDAD".
+
+cambiar linea 91 por 02 DCA    PIC 9(08)
+quitar  02 DED    PIC 9(03).
