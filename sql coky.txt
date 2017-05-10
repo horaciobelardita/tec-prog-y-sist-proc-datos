@@ -1,0 +1,29 @@
+SQL
+ejercicio 5
+SELECT dni, nya, email from personas order by nya ASC 
+SELECT dni, nya, email from personas order by nya DESC
+
+ejercicio 6
+SELECT TOP 10 PERCENT Dni , Nya , Email. Telefono,Edad FROM Personas
+
+ORDER BY Edad DESC; -> selecciona los primeros 10%  de la tabla personas ordenado por edad de forma decreciente
+
+select distinct nya from personas -> seleccciona los valores diferentes del campo nya de la tabla personas , es decir, no devuelve duplicados.
+
+
+select distinctrow nya from personas -> sinonimo de distinct
+select distinctrow nya as empleado from personas -> selecciona campo nya como alias empleado desde personas
+
+ejercicio 7
+SELECT * FROM personas where edad > 25 and edad < 50  -> selecciona todos los campos de la tabla personas donde la edad es mayor 25 y menor a 50
+
+SELECT * FROM personas where cod_postal between 28000 and 28999 -> selecciona todos los campos de la tabla personas donde cod_postal esta entre 28000 y 28999
+
+SELECT * FROM personas where nya in ('Pepe', 'Maria', 'Jose') -> selecciona todos los campos donde nya esta entre Pepe, Maria, Jose
+
+SELECT nya, telefono from personas where nya like 'P%'  -> filtra nya por los valores que empiezan con P
+
+
+
+
+ 
